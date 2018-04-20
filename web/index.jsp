@@ -20,7 +20,7 @@
     if (mappingRule.equals(MappingRule.MAPPING_RULE_NOT_EXIST) || mappingRule.getMethod() == null)
     {
 %>
-<meta http-equiv="Refresh" content="0; url=/domain-404.jsp?d=<%=domain%>">
+<meta http-equiv="Refresh" content="0; url=/domain-404.jsp?d=<%=domain.replace("`", ".")%>">
 <%
         return;
     }
