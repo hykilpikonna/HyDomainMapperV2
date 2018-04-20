@@ -8,7 +8,7 @@ package cc.moecraft.web.hydomainmapperv2;
  */
 public class MappingRule
 {
-    public static final MappingRule MAPPING_RULE_NOT_EXIST = new MappingRule("INVALID_FROM", "INVALID_TO", MappingMethod.INNERHTML);
+    public static final MappingRule MAPPING_RULE_NOT_EXIST = new MappingRule("INVALID_FROM", "INVALID_TO", MappingMethod.REDIRECT);
 
     private String from;
     private String to;
@@ -19,6 +19,18 @@ public class MappingRule
         this.from = from;
         this.to = to;
         this.method = method;
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (obj instanceof MappingRule)
+        {
+            MappingRule other = (MappingRule) obj;
+
+            return other.from.equals(from) && other.to.equals(to) && other.method.equals(method);
+        }
+        return false;
     }
 
     public String getFrom()

@@ -20,6 +20,13 @@ public class Main implements ServletContextListener
         return instance;
     }
 
+    private MappingConfig mappingConfig;
+
+    public static MappingConfig mappingConfig()
+    {
+        return getInstance().mappingConfig;
+    }
+
     @Override
     public void contextDestroyed(ServletContextEvent arg0)
     {
@@ -33,5 +40,7 @@ public class Main implements ServletContextListener
         //Notification that the web application initialization process is starting
 
         instance = this;
+
+        mappingConfig = new MappingConfig();
     }
 }

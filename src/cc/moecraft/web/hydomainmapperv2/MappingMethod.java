@@ -8,5 +8,5 @@ package cc.moecraft.web.hydomainmapperv2;
  */
 public enum MappingMethod
 {
-    REDIRECT, INNERHTML
+    REDIRECT, AJAX, CORS
 }
