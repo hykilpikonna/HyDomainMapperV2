@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="HyDomainMapperV2:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/HyDomainMapperV2_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="HyDomainMapperV2/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="HyDomainMapperV2" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="guava" />
+          <element id="library" level="application" name="MoeConfigurationLib" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
